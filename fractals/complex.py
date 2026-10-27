@@ -28,7 +28,7 @@ def ice_fractal_1(order: int, size: float) -> None:
         t.pendown()
     t.pencolor(base)
 
-    ice_fractal_1(order - 1, size / 2)            # вторая половина линии
+    ice_fractal_1(order - 1, size / 2)  
     if owner:
         ice_fractal_1.top = None
 
