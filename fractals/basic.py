@@ -1,10 +1,10 @@
 
-import turtle
+import turtle as t
 
-START_POS = (0, -250)  # начальная позиция (внизу экрана)
+'''START_POS = (0, -250)  # начальная позиция (внизу экрана)
 t = turtle.Turtle()
 t.left(90)
-t.speed(0)
+t.speed(0)'''
 
 
 def draw_binary_tree(depth: int, size: float, angle: float) -> None:
@@ -27,7 +27,7 @@ def draw_binary_tree(depth: int, size: float, angle: float) -> None:
     t.backward(size)  # назад к началу
 
 
-def draw_branch(l: float, n: int) -> None:
+def draw_branch(n: int, l: float) -> None:
     """Рекурсивная часть «Ветки» (из второго кода).
 
     После вызова черепашка стоит в начальной точке, но смотрит
@@ -42,9 +42,9 @@ def draw_branch(l: float, n: int) -> None:
     for i in range(n):
         t.forward(x)
         t.left(45)
-        draw_branch(0.5 * x * (n - i - 1), n - i - 1)  # левая веточка
+        draw_branch(n - i - 1, 0.5 * x * (n - i - 1))  # левая веточка
         t.left(90)
-        draw_branch(0.5 * x * (n - i - 1), n - i - 1)  # правая веточка
+        draw_branch(n - i - 1, 0.5 * x * (n - i - 1))  # правая веточка
         t.right(135)
 
     t.forward(x)
