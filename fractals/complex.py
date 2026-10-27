@@ -1,3 +1,6 @@
+import turtle as t
+import math
+
 def ice_fractal_1(order: int, size: float) -> None:
     colors = ["#000000", "#d62828", "#f77f00", "#2a9d8f", "#1d6fd1", "#7b2cbf", "#e5338b", "#8d6e3f"]
     owner = getattr(ice_fractal_1, "top", None) is None
