@@ -48,9 +48,9 @@ def draw_branch(l: float, n: int) -> None:
     for i in range(n):
         t.forward(x)
         t.left(45)
-        _branch(0.5 * x * (n - i - 1), n - i - 1)  # левая веточка
+        draw_branch(0.5 * x * (n - i - 1), n - i - 1)  # левая веточка
         t.left(90)
-        _branch(0.5 * x * (n - i - 1), n - i - 1)  # правая веточка
+        draw_branch(0.5 * x * (n - i - 1), n - i - 1)  # правая веточка
         t.right(135)
 
     t.forward(x)
