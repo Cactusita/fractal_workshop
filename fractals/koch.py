@@ -27,7 +27,7 @@ def koch_snowflake(order: int, size: float) -> None:
     for _ in range(3):
         koch(order, size)
         t.right(120)
-def minkowski(order, size):
+def minkowski(order: int, size: float) -> None:
     if order == 0:
         t.forward(size)
         return
@@ -46,5 +46,3 @@ def minkowski(order, size):
     minkowski(order - 1, s)
     t.right(90)
     minkowski(order - 1, s)
-minkowski(3, 500)
-t.done()
