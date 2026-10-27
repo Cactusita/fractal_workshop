@@ -33,7 +33,7 @@ def draw_binary_tree(depth: int, size: float, angle: float) -> None:
     t.backward(size)  # назад к началу
 
 
-def _branch(l: float, n: int) -> None:
+def draw_branch(l: float, n: int) -> None:
     """Рекурсивная часть «Ветки» (из второго кода).
 
     После вызова черепашка стоит в начальной точке, но смотрит
@@ -58,26 +58,3 @@ def _branch(l: float, n: int) -> None:
     t.forward(l)  # вернулись в начало
 
 
-def draw_branch(n: int, size: float) -> None:
-    """Фрактал «Ветка»: n — глубина, size — длина ствола.
-
-    В конце разворачиваем черепашку обратно, чтобы она смотрела
-    в исходном направлении, как у draw_binary_tree.
-    """
-    _branch(size, n)
-    t.left(180)
-
-
-def run_binary_tree():
-    draw_binary_tree(depth=8, size=100.0, angle=30)
-
-
-def run_branch():
-    draw_branch(n=5, size=200.0)
-
-
-# Что рисовать при запуске: оставьте одну строку
-run_branch()
-# run_binary_tree()
-
-turtle.done()
